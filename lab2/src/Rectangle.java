@@ -41,6 +41,6 @@ public class Rectangle {
     }
 
     public Rectangle Union(Rectangle other) {
-        return new Rectangle(Math.min(x1, other.x1), Math.min(y1, other.y1), Math.min(x2, other.x2), Math.min(y2, other.y2));
+        return new Rectangle(Math.min(x1, other.x1), Math.min(y1, other.y1), Math.max(x2, other.x2), Math.max(y2, other.y2));
     }
 }
