@@ -5,14 +5,17 @@ public class DrawableRect extends Rectangle {
 
     public DrawableRect(int x1, int y1, int x2, int y2) {
         super(x1, y1, x2, y2);
+        outColor = Color.black;
     }
 
     public DrawableRect(int width, int height) {
         super(width, height);
+        outColor = Color.black;
     }
 
     public DrawableRect() {
         super();
+        outColor = Color.black;
     }
 
     public Color getOutColor() {

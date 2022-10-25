@@ -5,14 +5,17 @@ public class ColoredRect extends DrawableRect {
 
     public ColoredRect(int x1, int y1, int x2, int y2) {
         super(x1, y1, x2, y2);
+        inColor = Color.red;
     }
 
     public ColoredRect(int width, int height) {
         super(width, height);
+        inColor = Color.red;
     }
 
     public ColoredRect() {
         super();
+        inColor = Color.red;
     }
 
     public Color getInColor() {
