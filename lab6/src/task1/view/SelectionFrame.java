@@ -16,6 +16,7 @@ public class SelectionFrame extends JFrame implements ActionListener {
 
     public SelectionFrame(MainFrame mainFrame) {
         this.mainFrame = mainFrame;
+        this.mainFrame.setEnabled(false);
         displayMultiplicationTable = new JRadioButton("отображать таблицу умножения");
         displayAdditionTable = new JRadioButton("отображать таблицу сложения");
         submitChoice = new JButton("Подтвердить");
@@ -43,6 +44,7 @@ public class SelectionFrame extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == submitChoice) {
+            mainFrame.setEnabled(true);
             dispose();
             mainFrame.updateContent(selectedChoice);
         }
