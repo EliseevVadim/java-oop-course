@@ -12,8 +12,6 @@ public class Main {
         Random random = new Random();
         byte[] dataToWrite = new byte[ARRAY_LENGTH];
         random.nextBytes(dataToWrite);
-        System.out.println(NORMAL_FILE_NAME);
-        System.out.println(BUFFERED_FILE_NAME);
         try {
             long normalWriteDifference = writeToFileInNormalWay(dataToWrite);
             long bufferedWriteDifference = writeToFileInBufferedWay(dataToWrite);
@@ -67,9 +65,7 @@ public class Main {
         long bufferedWritingStart = System.currentTimeMillis();
         FileOutputStream bufferedFileOut = new FileOutputStream(BUFFERED_FILE_NAME);
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(bufferedFileOut);
-        for (byte element : dataToWrite) {
-            bufferedOutputStream.write(element);
-        }
+        bufferedOutputStream.write(dataToWrite);
         bufferedOutputStream.close();
         long bufferedWritingEnd = System.currentTimeMillis();
         long bufferedWritingDifference = bufferedWritingEnd - bufferedWritingStart;
